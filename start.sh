@@ -5,7 +5,7 @@ pg_ctlcluster 16 main start
 
 su postgres -c "psql -tc \"SELECT 1 FROM pg_database WHERE datname='voice_agent'\" | grep -q 1 || psql -c 'CREATE DATABASE voice_agent'"
 
-chroma run --host 0.0.0.0 --port "${CHROMA_PORT:-8100}" --path /app/chroma_data &
+chroma run --host 127.0.0.1 --port "${CHROMA_PORT:-8100}" --path /app/chroma_data &
 
 alembic upgrade head
 
