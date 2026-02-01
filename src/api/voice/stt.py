@@ -38,7 +38,7 @@ class DeepgramSTT:
         logger.info("[Deepgram] Connecting to: %s", full_url)
         self._ws = await websockets.connect(
             full_url,
-            extra_headers=headers,
+            additional_headers=headers,
         )
         self._sample_rate = sample_rate
         self._audio_buffer = bytearray()
