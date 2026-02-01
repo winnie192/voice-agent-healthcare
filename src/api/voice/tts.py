@@ -148,7 +148,7 @@ class DeepgramTTS:
         url = DEEPGRAM_WS_URL.format(model=settings.deepgram_tts_model)
         return await websockets.connect(
             url,
-            extra_headers={"Authorization": f"Token {settings.deepgram_api_key}"},
+            additional_headers={"Authorization": f"Token {settings.deepgram_api_key}"},
         )
 
     async def connect(self) -> None:
