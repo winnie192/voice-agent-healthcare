@@ -1,0 +1,12 @@
+.venv
+node_modules
+.git
+__pycache__
+.mypy_cache
+.pytest_cache
+.ruff_cache
+chroma_data/
+src/mobile/
+src/web/
+*.pyc
+.env
